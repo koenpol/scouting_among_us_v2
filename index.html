@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="input-container">
+        <h1>Among us scouting edition</h1>
+        <br>
+        <h2>Voer de code in</h2>
+        <input type="text" class="input-field">
+        <button class="input-btn">Go</button>
+        <br>
+        <sub style="font-size: 15px;">Gemaakt door Ting en Koen</sub>
+    </div>
+
+    <div class="vraag-container">
+        <h1 class="main-vraag">Dit is een vraag</h1>
+        <br>
+        <div class="vraag-items">
+            <div class="vraag-keuze">
+                <button class="gen-btn keuze-btn" data-keuze="0">num1</button>
+                <button class="gen-btn keuze-btn" data-keuze="1">num2</button>
+                <button class="gen-btn keuze-btn" data-keuze="2">num3</button>
+                <button class="gen-btn keuze-btn" data-keuze="3">num4</button>
+            </div>
+            <div class="vraag-janee">
+                <button class="gen-btn janee-btn" data-keuze="ja">Ja</button>
+                <button class="gen-btn janee-btn" data-keuze="nee">Nee</button>
+            </div>
+            <div class="vraag-num">
+                <input type="number" class="input-field input-num">
+                <button class="input-btn-vraag">Antwoord</button>
+            </div>
+            <div class="vraag-type">
+                <input type="text" class="input-field input-type">
+                <button class="input-btn-vraag">Antwoord</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ans-container">
+        <h1 class="letter"></h1>
+        <button class="input-btn reload-btn">Nieuwe code invoeren</button>
+    </div>
+
+
+    <div class="main"></div>
+    <script src="jquery.min.js"></script>
+    <script src="codes.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
