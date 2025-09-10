@@ -51,7 +51,15 @@ $(document).ready(function() {
             $input_container.css("display", "none");
             $admin_container.css("display", "flex");
             setTimeout(() => {
-                $admin_container.css("opacity", "1");
+                $admin_container.css({
+                    "opacity": "1",
+                    "width": "calc(100vw - 26px)",
+                    "height": "calc(100vh - 106px)"
+                });
+                $("body").css({
+                    "display": "unset"
+                });
+
                 let puzzle_array = among_puzzle["puzzle_type"];
                 for (let i = 0; i < puzzle_array.length; i++) {
                     $round_select.append('<option value="'+i+'">'+puzzle_array[i]["name"]+' ronde:'+(i+1)+'</option>');
