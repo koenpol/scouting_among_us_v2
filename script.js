@@ -23,7 +23,7 @@ $(document).ready(function() {
                 for (let i = 0; i < array.length; i++) {
                     if( array[i]["code"].toUpperCase().replace(/\s/g, '') == user_input){
                         return show_vraag(array[i], i, i1);
-                    } else if( user_input == "a".toUpperCase().replace(/\s/g, '')){
+                    } else if( user_input == "A".toUpperCase().replace(/\s/g, '')){
                     // } else if( user_input == "4dm1nm0d3".toUpperCase().replace(/\s/g, '')){
                         return admin_func();
                     }
