@@ -27,6 +27,12 @@ body h1 {
     text-align: center;
 }
 
+body img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
 body .admin-container {
     width: 80%;
     display: none;
@@ -74,6 +80,13 @@ body .admin-container .custom-item {
     padding: 10px;
 }
 
+body .admin-container .custom-item:has(img) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 .input-container, .vraag-container, .ans-container, .admin-container {
     width: 30%;

@@ -72,26 +72,31 @@ $(document).ready(function() {
                             <div class="custom-item">Antwoord</div>
                         </div>`);
                     among_num = parseInt($round_select.val()) + 1;
-                    among_target = among_codes["r" + among_num];
+                    if (among_num == 1) {
+                        among_target = among_codes['test'];
+                    }
+                    else {
+                        among_target = among_codes["r" + among_num];
+                    }
                     woord_val = $round_select.val();
                     for (let i2 = 0; i2 < among_target.length; i2++) {
-                        if (typeof among_codes["r"+among_num][i2]["keuzes"] !== 'undefined') {
-                            among_codes["r"+among_num][i2]["keuzes2"] = "";
-                            for (let index = 0; index < among_codes["r"+among_num][i2]["keuzes"].length; index++) {
-                                among_codes["r"+among_num][i2]["keuzes2"] += among_codes["r"+among_num][i2]["keuzes"][index] + "<br>";
+                        if (typeof among_target[i2]["keuzes"] !== 'undefined') {
+                            among_target[i2]["keuzes2"] = "";
+                            for (let index = 0; index < among_target[i2]["keuzes"].length; index++) {
+                                among_target[i2]["keuzes2"] += among_target[i2]["keuzes"][index] + "<br>";
                             }
                         }
                         else {
-                            among_codes["r"+among_num][i2]["keuzes2"] = "N.V.T.";
+                            among_target[i2]["keuzes2"] = "N.V.T.";
                         }
                         $custom_table.append(`
                             <div class="custom-row">
                                 <div class="custom-item">${among_puzzle["puzzle_type"][woord_val]["name"].charAt(i2)}|${(i2+1)}</div>
-                                <div class="custom-item">${among_codes["r"+among_num][i2]["code"]}</div>
-                                <div class="custom-item">${among_codes["r"+among_num][i2]["func_name"]}</div>
-                                <div class="custom-item">${among_codes["r"+among_num][i2]["info"]}</div>
-                                <div class="custom-item">${among_codes["r"+among_num][i2]["keuzes2"]}</div>
-                                <div class="custom-item">${among_codes["r"+among_num][i2]["ans"]}</div>
+                                <div class="custom-item">${among_target[i2]["code"]}</div>
+                                <div class="custom-item">${among_target[i2]["func_name"]}</div>
+                                <div class="custom-item">${among_target[i2]["info"]}</div>
+                                <div class="custom-item">${among_target[i2]["keuzes2"]}</div>
+                                <div class="custom-item">${among_target[i2]["ans"]}</div>
                             </div>`);
                     }
                 }
@@ -158,20 +163,19 @@ $(document).ready(function() {
                     $ans_container.css("opacity", "1");
                     $letter.html("Je letter is "+among_puzzle["puzzle_type"][ronde_name_num]["name"].charAt(ronde_num).toUpperCase()+".<br>Op plek "+(ronde_num+1)+ '.<br><img height="200px" src="img/amogus.png">');
                     $reload_b.show();
-                    $reload_b.click(function() {
-                        reload(false);
-                    });
                 }, 100);
             }, 500);
 
-        }
+        }   
+    }
 
-        function reload(give_error) {
-            if(give_error == true) {
-                alert("FOUT ANTWOORD!!!\nDe pagina word herladen :)");
-            }
-            location.reload();
+    $reload_b.click(function() {
+        reload(false);
+    });
+    function reload(give_error) {
+        if(give_error == true) {
+            alert("FOUT ANTWOORD!!!\nDe pagina word herladen :)");
         }
-        
+        location.reload();
     }
 });
