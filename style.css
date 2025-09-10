@@ -24,16 +24,65 @@ body {
 
 body h1 {
     font-size: 26px;
+    text-align: center;
 }
 
-.input-container, .vraag-container, .ans-container {
+body .admin-container {
+    width: 80%;
+    display: none;
+    opacity: 0;
+    height: auto;
+    padding: 50px 10px;
+}
+
+body .admin-container .round-select {
+    color: black;
+}
+
+body .admin-container .round-select option {
+    color: black;
+}
+
+body .admin-container .custom-table {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 400px;
+}
+
+body .admin-container .custom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body .admin-container .custom-row.main-row {
+    display: flex;
+    flex-direction: row;
+}
+
+body .admin-container .custom-item {
+    font-size: 15px;
+    word-wrap: break-word;
+    width: 20%;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+    border-color: #ffffff;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 10px;
+}
+
+
+.input-container, .vraag-container, .ans-container, .admin-container {
     width: 30%;
-    height: 50%;
+    min-height: 50%;
     border-radius: 20px;
     border-color: #ffffff;
     border-width: 3px;
     border-style: solid;
-    padding: 10px;
+    padding: 20px;
     background: transparent;
     background-image: radial-gradient(circle, #ffffff33 0%, transparent 70%, transparent 100%);
     display: flex;
@@ -80,6 +129,7 @@ body .input-container {
 
 .vraag-items {
     width: 100%;
+    padding: 5px;
 }
 
 .vraag-items .vraag-keuze {
@@ -89,6 +139,16 @@ body .input-container {
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+.vraag-items .vraag-items:has(.vraag-keuze .keuze-btn img) {
+    /* width: 50%; */
+}
+
+.vraag-items .vraag-keuze:has(img) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .vraag-items .vraag-keuze .gen-btn {
@@ -101,6 +161,18 @@ body .input-container {
     outline: none;
     cursor: pointer;
 }
+
+.vraag-items .vraag-keuze .keuze-btn:has(img) {
+    width: calc(50% - 7.5px);
+    height: 25%;
+
+}
+
+.vraag-items .vraag-keuze .keuze-btn img {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
 
 .vraag-items .vraag-janee {
     display: flex;
@@ -148,6 +220,13 @@ body .input-container {
 .ans-container {
     display: none;
     opacity: 0;
+}
+
+@media only screen and (max-width: 760px) {
+    .input-container, .vraag-container, .ans-container, .admin-container {
+        width: calc(90% - 40px);
+    }
+    
 }
 
 .main {
