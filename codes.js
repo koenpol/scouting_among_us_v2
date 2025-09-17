@@ -2,10 +2,11 @@ among_puzzle = {
   "puzzle_type":[
     {"name":"testing", "ronde":"test"},
     {"name":"Werkplicht", "ronde":"1"},
-    {"name":"Nachochips", "ronde":"2"},
+    {"name":"Rizzmaster", "ronde":"2"},
     {"name":"Glijmiddel", "ronde":"3"},
     {"name":"Flikkertje", "ronde":"4"},
-    {"name":"Zwijgrecht", "ronde":"5"}
+    {"name":"Zwijgrecht", "ronde":"5"},
+    {"name":"Nachochips", "ronde":"6"}
   ]
 }
 
@@ -16,6 +17,25 @@ among_codes = {
     {"func_name":"num", "code":"test3", "info":"1+1=", "ans":"2"},
     {"func_name":"type", "code":"test4", "info":"Waarom?", "ans":"Daarom"},
     {"func_name":"keuze", "code":"test5", "info":"Kies ff text2.", "keuzes":["<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>"], "ans":"1"}
+  ],
+  "r1":[
+    {"func_name":"keuze", "code":"test11", "info":"Wat is de hex code voor de kleur zwart?", "keuzes":["#000000", "#FFFFFF", "#AAAAAA", "#EEEEEE"], "ans":"0"},
+    {"func_name":"keuze", "code":"test21", "info":"over welke substance gaat deze chart?<br><img style='width:80%; height:80%;' src='img/vraag1.png' class='foto-keuze'>", "keuzes":["MDMA", "Heroïne", "Cannabis", "Antidepressiva"], "ans":"2"},
+    {"func_name":"num", "code":"test31", "info":"1+1=", "ans":"AAAAAAAAAAAA"},
+    {"func_name":"type", "code":"test41", "info":"wat voor soort formule is dit?<br>ax^4 + bx^3 + cx^2 + dx + e = 0", "ans":"quartic equation"},
+    {"func_name":"keuze", "code":"test51", "info":"Kies ff text2.", "keuzes":["<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>", "<img src='img/amogus.png' class='foto-keuze'>"], "ans":"1"}
+  ],
+  "r2":[
+    {"func_name":"keuze", "code":"test12", "info":"Welke is tung tung sahur?", "keuzes":[
+      "<img src='img/brainrot2.jpg' class='foto-keuze'>",
+      "<img src='img/brainrot1.jpg' class='foto-keuze'>",
+      "<img src='img/brainrot3.jpg' class='foto-keuze'>",
+      "<img src='img/brainrot4.webp' class='foto-keuze'>"], "ans":"1"},
+    {"func_name":"keuze", "code":"test22", "info":"Wie is dit?<br><img src='img/brainrot7.png' class='foto-keuze'>", "keuzes":["MrBeast", "Kirkiimad", "CG5", "Lebron James"], "ans":"2"},
+    {"func_name":"type", "code":"test32", "info":"Wat is een ander woord voor charisma?", "ans":"Rizz"},
+    {"func_name":"type", "code":"test42", "info":"Wie is dit?<br><img src='img/brainrot5.webp' class='foto-keuze'>", "ans":"John pork"},
+    {"func_name":"keuze", "code":"test52", "info":"Wie is dit?<br><img src='img/brainrot6.png' class='foto-keuze'>", "keuzes":["g-toilet", "camera toilet", "skibidi mutant", "strider skibidi toilet"], "ans":"0"},
   ]
+
 }
 

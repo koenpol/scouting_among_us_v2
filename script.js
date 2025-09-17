@@ -62,7 +62,7 @@ $(document).ready(function() {
 
                 let puzzle_array = among_puzzle["puzzle_type"];
                 for (let i = 0; i < puzzle_array.length; i++) {
-                    $round_select.append('<option value="'+i+'">'+puzzle_array[i]["name"]+' ronde:'+(i+1)+'</option>');
+                    $round_select.append('<option value="'+i+'">'+puzzle_array[i]["name"]+' ronde:'+(i)+'</option>');
                 }
                 change_table();
                 $round_select.on('change', function () {
@@ -84,7 +84,7 @@ $(document).ready(function() {
                         among_target = among_codes['test'];
                     }
                     else {
-                        among_target = among_codes["r" + among_num];
+                        among_target = among_codes["r" + (among_num - 1)];
                     }
                     woord_val = $round_select.val();
                     for (let i2 = 0; i2 < among_target.length; i2++) {
